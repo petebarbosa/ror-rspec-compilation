@@ -19,7 +19,9 @@ RSpec.configure do |config|
     puts '====> After suite hook <===='
   end
 
-  config
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failure] = true
+  end
 
   # config.before(:all) do
   #   puts '====> Before all tests in a file <===='
