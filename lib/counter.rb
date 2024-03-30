@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# Stop annoying Rubocop
-class Counter
+class Counter # :nodoc:
   @counter = 0
 
   def self.count

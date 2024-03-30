@@ -1,9 +1,11 @@
-class Calculator
-  def sum(a, b)
-    a + b
+# frozen_string_literal: true
+
+class Calculator # :nodoc:
+  def sum(first, second)
+    first + second
   end
 
-  def div(a, b)
-    a / b
+  def div(first, second)
+    first / second
   end
 end

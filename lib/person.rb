@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# Annoying rubocop
-class Person
+class Person # :nodoc:
   attr_accessor :name, :age
   attr_reader :status
 

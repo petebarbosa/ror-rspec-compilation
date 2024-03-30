@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe (1..10), 'Ranges' do
   it '#cover' do
     expect(subject).to cover(5)

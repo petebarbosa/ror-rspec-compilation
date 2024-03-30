@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'non_empty_string'
 
 describe NonEmptyString do

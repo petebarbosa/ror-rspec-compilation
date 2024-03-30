@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe 'Output' do
   context '#to_stdout' do
     it { expect { puts 'Message' }.to output.to_stdout }

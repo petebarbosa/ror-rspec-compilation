@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'Matchers de comparação' do
   it '>' do
     expect(5).to be > 1
@@ -18,7 +20,7 @@ describe 'Matchers de comparação' do
 
   it 'be_between with include' do
     expect(5).to be_between(2, 7).inclusive
-    expect(2). to be_between(2, 7).inclusive
+    expect(2).to be_between(2, 7).inclusive
   end
 
   it 'be_between with exclusive' do
@@ -40,3 +42,4 @@ describe 'Matchers de comparação' do
     expect([1, 2, 3]).to end_with(3)
   end
 end
+

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 $count = 0
 
 describe 'let' do
