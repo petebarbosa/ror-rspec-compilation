@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Mock object is a type of test double
+
 require 'student'
 require 'course'
 
