@@ -3,6 +3,10 @@
 require 'calculator'
 
 describe Calculator, 'Crazy calculator class' do
+  # The idea with context is to organize all tests within, well, the same
+  # context. If we're testing, in our calculator, everything related to a
+  # sum, we can simply set all of the into the '#sum' context.
+
   context '#sum' do
     it 'positive numbers' do
       result = subject.sum(5, 7)
