@@ -91,3 +91,52 @@ it 'creates a resource' do
   expect(resopnse).to respond_with_content_type(:json)
   expect(response).to assign_to(:resource)
 end
+
+
+# Test all possible cases
+#
+# Testing is a good practice, but if you do not test the edge cases, it will not be useful.
+# Test valid, edge and invalid cases. For example, consider the following action
+
+## DESTROY ACTION
+
+before_action :find_owned_resources
+before_action :find_resource
+
+def destroy
+  render 'show'
+  @consumption.destroy
+end
+
+# The error I useally seed lies in testin only whether the resouce has been removed. But there are
+# at lease two edge cases: when the resoucer is not found and when it's not owned. As a rule of thumb
+# think of all the possible inputs and test them.
+
+## BAD
+
+it 'show the resource'
+
+## GOOD
+
+describe '#destroy' do
+  context 'when resource is found' do
+    it 'responds with 200' do
+      ...
+    end
+    it 'shows the resource' do
+      ...
+    end
+  end
+
+  context 'when resource is not found' do
+    it 'responds with 404' do
+      ...
+    end
+  end
+
+  context 'when resource is not owned' do
+    it 'responds with 404' do
+      ...
+    end
+  end
+end
